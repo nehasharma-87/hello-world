@@ -1,0 +1,3 @@
+this is ec2 instance file.
+add some data
+nvivhd
