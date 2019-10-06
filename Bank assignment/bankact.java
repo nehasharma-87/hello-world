@@ -10,7 +10,7 @@ public class bankact {
 	int phone = 35837559;
 	int count = 0;
 	double withdrawalperday= 1000;
-	double remainingwithdraw = 1000;
+	
 	double x;
 	ArrayList<String> transaction = new ArrayList<String>();
 	
@@ -56,8 +56,8 @@ public class bankact {
 			transaction.add(customer_name + " | "+ bank_act_no + " | " + " Withdrawal |  " + withdrawamt + " | "+ balance);
 		}
 		else {
-			System.out.println("You have exceeded the $1000/day withdrawal limit. You can withdraw tomorrow.");
-		}
+			System.out.println("The maximum withdrawal limit is $1000/day. The remaining amount you can withdraw for today is $" + withdrawalperday );
+	}
 		return balance;
 	}
 		 public void printdetails() {

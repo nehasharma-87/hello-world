@@ -25,9 +25,9 @@ public class callingclass {
 	           }
 	     else {System.out.println("Your daily no. of transactions limit is is exhanusted.");
 	     break;} }
-		else {
+		else if(answer == 'n'){
 			break;}
-		}while(answer == 'y');
+		}while(answer == 'y' || (answer !='n' && answer != 'y'));
 	     
         
 	   
@@ -43,13 +43,13 @@ public class callingclass {
 		else {
 			System.out.println("You don't have enough balance to withdraw.");
 		}}
-		else {
+		else if(answer == 'n'){
 			break;
 		}
-		}while(answer=='y');
+		}while(answer=='y'|| (answer !='n' && answer != 'y'));
 		
 		
-		 
+		 do {
 	     System.out.print("Do you want to see the account details (Answer Y/N): ");
 	     answer = Character.toLowerCase(input.next().charAt(0));
 	     switch(answer) {
@@ -58,11 +58,26 @@ public class callingclass {
 	      	  break;
 	           }
 	        case 'n':{
-	      	  System.exit(0);
+	      	  
 	      	  break;
 	           }		
  
 
-	}
-	     call.transactionhistory();
+	}}while(answer!='y' && answer !='n' );
+		 
+		 
+		 do {
+	     System.out.print("Do you want to see the transaction history (Answer Y/N): ");
+	     answer = Character.toLowerCase(input.next().charAt(0));
+	     switch(answer) {
+	        case 'y':{
+	        	call.transactionhistory();
+	      	  break;
+	           }
+	        case 'n':{
+	      	  
+	      	  break;
+	           }     
+             }
+	     }while(answer!='y' && answer !='n' );
 }}
