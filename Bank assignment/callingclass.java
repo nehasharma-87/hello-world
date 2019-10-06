@@ -37,11 +37,12 @@ public class callingclass {
 		if (answer == 'y') {
 		System.out.print("\n Enter the withdrawal amount: ");
 		double withdrawalamt = input.nextDouble();
-		if (withdrawalamt <= call.balance) {
+		if (withdrawalamt <= call.balance && withdrawalamt <= call.withdrawalperday) {
 		System.out.println("Withdrawalamt entered = " + withdrawalamt );
 		call.withdraw(withdrawalamt);}
 		else {
-			System.out.println("You don't have enough balance to withdraw.");
+			System.out.println("You don't have enough balance to withdraw. The maximum amount you can withdraw is $"+ call.withdrawalperday);
+			
 		}}
 		else if(answer == 'n'){
 			break;
