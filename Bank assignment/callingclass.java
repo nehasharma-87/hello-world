@@ -60,12 +60,9 @@ public class callingclass {
 	        case 'n':{
 	      	  System.exit(0);
 	      	  break;
-	           }
-	     
-	    
-		
-   
+	           }		
+ 
 
 	}
-
+	     call.transactionhistory();
 }}

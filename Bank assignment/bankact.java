@@ -1,10 +1,10 @@
+import java.util.ArrayList;
 
 public class bankact {
 
 	
 	int bank_act_no = 122743;
-	double balance = 1500
-			;
+	double balance = 1500;
 	String customer_name = "Neha";
 	String email = "Nehas87@gmail.com";
 	int phone = 35837559;
@@ -12,16 +12,25 @@ public class bankact {
 	double withdrawalperday= 1000;
 	double remainingwithdraw = 1000;
 	double x;
+	ArrayList<String> transaction = new ArrayList<String>();
+	
+	public bankact()
+	{
+	transaction.add("Customer_name | Bank_act_no | Transaction |  Deposit/Withdrawal Amt | Balance ");
+	
+	}
 			
 	public double deposit(double depositamt) {
 		
 			
-		balance = balance + depositamt;
+		
 		if (depositamt >= 50) {
 			if (depositamt <= 500) {
 				    balance = balance + depositamt;
 					System.out.println("$" + depositamt +" is deposited in your A/c and your A/c balance is $" + balance );
+					transaction.add(customer_name + " | "+ bank_act_no + " | " + " Deposit |  " + depositamt +" | " + balance);
 					count = count +1;
+					
 					return balance;}
 			
 			else {
@@ -44,6 +53,7 @@ public class bankact {
 			
 			System.out.println("$" + withdrawamt + " is deducted from your a/c and Your A/c balance is $" + balance);
 			System.out.println("The remaining withdrawal amount for today is $" + withdrawalperday );
+			transaction.add(customer_name + " | "+ bank_act_no + " | " + " Withdrawal |  " + withdrawamt + " | "+ balance);
 		}
 		else {
 			System.out.println("You have exceeded the $1000/day withdrawal limit. You can withdraw tomorrow.");
@@ -57,6 +67,12 @@ public class bankact {
 			 System.out.println("Account Balance: $" + balance);
 			 System.out.println("Email id: " + email);
 		 System.out.println("A/c Phone no. " + phone);
+		 }
+		 
+		 public void transactionhistory() {
+			 for (int i = 0; i < transaction.size(); i++) {
+				 System.out.println(transaction.get(i));
+			 }
 		 }
 		 
 	}
