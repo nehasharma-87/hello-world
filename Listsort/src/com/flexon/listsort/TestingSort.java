@@ -1,7 +1,7 @@
 package com.flexon.listsort;
 
 import org.junit.*;
-import java.lang.*;
+import org.junit.jupiter.api.Test;
 
 class TestingSort {
 
