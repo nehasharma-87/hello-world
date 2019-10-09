@@ -10,9 +10,9 @@ public class ArraySort {
 		
 	}
     
-    public int[] bubbleSort(int[] nums) {
+    public static int[] bubbleSort(int[] nums) {
     	
-    int[] newArray = newList(nums);
+    int[] newArray = nums;
     	for(int i = 0;i <newArray.length;i++) {
     		for(int j=1;j<(newArray.length-i);j++) {
     			if (newArray[j]>newArray[j-1]) {
@@ -30,7 +30,7 @@ public class ArraySort {
     	int idx = input.nextInt();
     	System.out.println("Integer at Index " + idx + " is: " + nums[idx]);
     }
-    public int findMin(int[] nums) {
+    public static int findMin(int[] nums) {
     	int min = nums[0];
     	for(int i =1;i<nums.length;i++) {
     		if(nums[i]<min) {
@@ -39,7 +39,7 @@ public class ArraySort {
     	}return min;
     }
     
-    public int findMax(int[] nums) {
+    public static int findMax(int[] nums) {
     	int max = nums[0];
     	for(int i =1;i<nums.length;i++) {
     		if(nums[i]>max) {
@@ -55,7 +55,7 @@ public class ArraySort {
     		
     	}return newList;
     }
-    public int[] reverseArray(int[] nums) {
+    public static int[] reverseArray(int[] nums) {
     	int[] newrev = new int[nums.length];
     	for(int i=0;i<nums.length;i++) {
     		newrev[i] = nums[nums.length-i-1];
@@ -77,6 +77,7 @@ public class ArraySort {
         
         ArraySort a = new ArraySort();
         a.printArray(numarray);
+        
         System.out.println("");
         a.printArray(a.bubbleSort(numarray));
         System.out.println("");
