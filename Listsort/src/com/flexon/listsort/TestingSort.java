@@ -1,8 +1,6 @@
 package com.flexon.listsort;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.Assert;
+import org.junit.*;
 import org.junit.jupiter.api.Test;
 
 class TestingSort {
