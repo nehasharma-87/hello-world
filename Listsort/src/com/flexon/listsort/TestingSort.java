@@ -1,6 +1,7 @@
 package com.flexon.listsort;
 
-import  org.junit.*;
+import  org.junit.Test;
+import static org.junit.Assert.*;
 //import  org.junit.jupiter.api.Test;
 
 class TestingSort {
@@ -9,13 +10,13 @@ class TestingSort {
 	public void test() {
 		int[] expected = {9,8,7,6,5,4};
 		int[] given = {4,5,6,7,8,9};
-		Assert.assertArrayEquals(expected, ArraySort.bubbleSort(given));
+		assertArrayEquals(expected, ArraySort.bubbleSort(given));
 		int minexpected = 4;
-		Assert.assertEquals(minexpected,ArraySort.findMin(given));
+		assertEquals(minexpected,ArraySort.findMin(given));
 		int maxexpected = 9;
-		Assert.assertEquals(maxexpected,ArraySort.findMax(given));
+		assertEquals(maxexpected,ArraySort.findMax(given));
 		int[] expectedrev = {4,5,6,7,8,9};
-		Assert.assertArrayEquals(expectedrev,ArraySort.reverseArray(given));
+		assertArrayEquals(expectedrev,ArraySort.reverseArray(given));
 		
 	
 	}
